@@ -1,0 +1,36 @@
+header.header {
+    background: #121212;
+    width: 100%;
+    height: 80px;
+}
+
+// fix for new header.php schema layout
+.inner-header {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.site-title {
+    margin: 0 0.5em 0 0;
+    a {
+        font-size: 1.5rem;
+    }
+}
+
+.bloginfo {
+    display: flex;
+}
+
+.logo {
+    margin-right: 8px;
+    img {
+        // replace /library/images/logo.svg and adjust for your logo size
+        width: 48px;
+        height: 48px;
+    }
+}
+
