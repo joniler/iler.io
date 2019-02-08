@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import './HomeAnimation.scss'
 import DayCycle from './DayCycle/DayCycle'
-import '../../images/animation/bike/tiger.svg'
-import '../../images/animation/bike/fork.svg'
-import '../../images/animation/bike/swingarm.svg'
-import '../../images/animation/bike/front-wheel.svg'
-import '../../images/animation/bike/rear-wheel.svg'
-import '../../images/animation/bike/rider.svg'
-import '../../images/animation/bike/head.svg'
+import tiger from '../../images/animation/bike/tiger.svg'
+import fork from '../../images/animation/bike/fork.svg'
+import swingarm from '../../images/animation/bike/swingarm.svg'
+import fWheel from '../../images/animation/bike/front-wheel.svg'
+import rWheel from '../../images/animation/bike/rear-wheel.svg'
+import rider from '../../images/animation/bike/rider.svg'
+import riderHead from '../../images/animation/bike/head.svg'
 
 class HomeAnimation extends Component {
     state = {
@@ -35,31 +35,38 @@ class HomeAnimation extends Component {
         ]
     }
 
-    // toggleActive(i) {
-    //     active: !this.state.dayArray[i].active;
-    // }
-
     componentDidMount() {
-        window.addEventListener('load', this.dayCycleHandler);
-    }
+        this.dayCycleHandler();
+    } 
 
     dayCycleHandler = () => {
-        // let da = this.state.dayArray;
-        // let dayArrayLength = da.length;
-        // let i = 0
-        // setInterval(() => {
+        let dArray = [...this.state.dayArray];
+        let dayArrayLength = dArray.length;
+        let i = 0;
+        let e = dayArrayLength - 1;
 
-        //     if (i === dayArrayLength){
-        //         i = 0;
-        //         this.setState(this.state.dayArray[i].active = true);
-        //     } 
-            
-        //     else {
-        //         i++
-        //         this.setState(this.state.dayArray[i].active = true);
-        //     }
+        setInterval(() => {
+            this.toggleActiveDayTime(i, e, dArray, dayArrayLength);
+            i++
+            if (i === dayArrayLength) {
+                i = 0;
+            }
+            e = (i === 0 ) ? (dayArrayLength - 1) : (i - 1) ;
+        }, 3000)
+    }
 
-        // }, 2000)
+    toggleActiveDayTime(i, e, dArray, dayArrayLength) {
+        let dActive = {...dArray[i]};
+        let dPrevActive = {...dArray[e]};
+        // console.log('Prev active time was ' + dPrevActive.time);
+        // console.log('Current active time is ' + dActive.time);
+        dPrevActive.active = false;
+        dActive.active = true;
+        dArray[e] = dPrevActive;
+        dArray[i] = dActive;
+        this.setState({dayArray: dArray}, () => {
+            //do something
+        }); 
     }
 
     render() {
@@ -77,21 +84,26 @@ class HomeAnimation extends Component {
                     <div className="cityDay"></div>
                     <div className="cityNight"></div>
                 </div>
-                <div className="sidewalk"></div>
+                <div className="sidewalk">
+                    <img src="" alt="" className="bb1"/>
+                    <img src="" alt="" className="bb2"/>
+                    <img src="" alt="" className="bb3"/>
+                    <img src="" alt="" className="bb4"/>
+                </div>
                 <div className="road"></div>
                 <div className="bike">
-                    <div className="rider">
-                        <img src="" alt="" className="riderHead"/>
-                        <img src="" alt="" className="riderBody"/>
-                    </div>
-                    <img src="" alt="" className="tiger"/>
-                    <div className="bikeFront">
-                        <img src="" alt="" className="fork"/>
-                        <img src="" alt="" className="fWheel"/>
+                <div className="bikeFront">
+                    <img src={fWheel} alt="" className="fWheel"/>
+                        <img src={fork} alt="" className="fork"/>
                     </div>
                     <div className="bikeRear">
-                        <img src="" alt="" className="swingarm"/>
-                        <img src="" alt="" className="rWheel"/>
+                        <img src={rWheel} alt="" className="rWheel"/>
+                        <img src={swingarm} alt="" className="swingarm"/>
+                    </div>
+                    <img src={tiger} alt="" className="tiger"/>
+                    <div className="rider">
+                        <img src={rider} alt="" className="riderBody"/>
+                        <img src={riderHead} alt="" className="riderHead"/>
                     </div>
                 </div>
                 <div className="cars"></div>

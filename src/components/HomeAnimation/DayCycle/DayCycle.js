@@ -1,6 +1,11 @@
 import React from 'react'
 import DayCycleItem from './DayCycleItem/DayCycleItem'
 import './DayCycle.scss'
+// import sunrise from '../../../images/animation/timeOfDay/sunrise.svg'
+// import day from '../../../images/animation/timeOfDay/day.svg'
+// import sunset from '../../../images/animation/timeOfDay/sunset.svg'
+// import dusk from '../../../images/animation/timeOfDay/dusk.svg'
+// import night from '../../../images/animation/timeOfDay/night.svg'
 
 const DayCycle = (props) => {
 
@@ -23,4 +28,8 @@ const DayCycle = (props) => {
     )
 }
 
+
+
 export default DayCycle;
+
+
