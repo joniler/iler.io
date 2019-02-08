@@ -4,4 +4,136 @@
     top: 80px;
     width: 100vw;
     height: calc(100vh - 80px);
+    overflow: hidden;
+    .road {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 90;
+        width: 13500px;
+        height: 200px;
+        background-image: url(../../images/animation/landscape/road.svg);
+        background-repeat: repeat-x;
+        will-change: transform;
+        animation: road 20s linear infinite;
+    }
+    .bike {
+        position: absolute;
+        bottom: 150px;
+        left: 20px;
+        z-index: 100;
+        width: 120px;
+        .rider, .tiger, .bikeFront, .bikeRear {
+            position: absolute;
+        }
+        .rider {
+            width: 50px;
+            left: 0;
+            bottom: 0;
+            .riderBody, .riderHead {
+                position: absolute;
+            }
+            .riderBody {
+                width: 50px;
+                left: 45px;
+                bottom: -68px;
+            }
+            .riderHead {
+                width: 20px;
+                left: 65px;
+                bottom: -5px;
+            }
+        }
+        .bikeFront {
+            width: 35px;
+            left: 0;
+            top: 0;
+            .fork, .fWheel {
+                position: absolute;
+            }
+            .fork {
+                width: 15px;
+                left: 100px;
+                bottom: -60px;
+            }
+            .fWheel {
+                width: 35px;
+                left: 95px;
+                bottom: -76px;
+                will-change: transform;
+                animation: spin 200ms linear infinite;
+            }
+        }
+        .bikeRear {
+            width: 40px;
+            left: 0;
+            top: 0;
+            .swingarm, .rWheel {
+                position: absolute;
+            }
+            .swingarm {
+                width: 40px;
+                left: 25px;
+                bottom: -61px;
+            }
+            .rWheel {
+                width: 35px;
+                left: 10px;
+                bottom: -76px; 
+                will-change: transform;
+                animation: spin 200ms linear infinite;
+            }
+        }
+    }
+    .cityScape {
+        position: absolute;
+        bottom: 212px;
+        left: 0;
+        z-index: 40;
+        width: 13500px;
+        .cityDay {
+            background-image: url(../../images/animation/landscape/city-day.svg);
+            background-repeat: repeat-x;
+            height: 500px;
+            width: 13500px;
+            will-change: transform;
+            animation: city 50s linear infinite;
+        }
+    }
+    .sidewalk {
+        position: absolute;
+        left: 0;
+        bottom: 120px;
+        z-index: 50;
+        width: 13500px;
+        height: 100px;
+        background: gray;
+    }
+}
+
+@keyframes road {
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(-4500px, 0, 0); /* The image width */
+    }
+}
+
+@keyframes city {
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(-4500px, 0, 0); /* The image width */
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -8,28 +8,30 @@
         top: 0;
         left: 0;
         opacity: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .cycleLayer.active {
         opacity: 1;
     }
     .sunrise {
         z-index: 10;
-        background: url(../../../images/animation/timeOfDay/sunrise.svg);
+        background-image: url(../../../images/animation/timeOfDay/sunrise.svg);
     }
     .day {
         z-index: 11;
-        background: url(../../../images/animation/timeOfDay/day.svg);
+        background-image: url(../../../images/animation/timeOfDay/day.svg);
     }
     .sunset {
         z-index: 12;
-        background: url(../../../images/animation/timeOfDay/sunset.svg);
+        background-image: url(../../../images/animation/timeOfDay/sunset.svg);
     }
     .dusk {
         z-index: 13;
-        background: url(../../../images/animation/timeOfDay/dusk.svg);
+        background-image: url(../../../images/animation/timeOfDay/dusk.svg);
     }
     .night {
         z-index: 14;
-        background: url(../../../images/animation/timeOfDay/night.svg);
+        background-image: url(../../../images/animation/timeOfDay/night.svg);
     }
 }
