@@ -8,6 +8,11 @@ import fWheel from '../../images/animation/bike/front-wheel.svg'
 import rWheel from '../../images/animation/bike/rear-wheel.svg'
 import rider from '../../images/animation/bike/rider.svg'
 import riderHead from '../../images/animation/bike/head.svg'
+import bb1 from '../../images/animation/billboards/bb1.svg'
+import bb2 from '../../images/animation/billboards/bb2.svg'
+import bb3 from '../../images/animation/billboards/bb3.svg'
+import bb4 from '../../images/animation/billboards/bb4.svg'
+import bgLandscape from '../../images/animation/landscape/bglandscape.svg'
 
 class HomeAnimation extends Component {
     state = {
@@ -44,6 +49,7 @@ class HomeAnimation extends Component {
         let dayArrayLength = dArray.length;
         let i = 0;
         let e = dayArrayLength - 1;
+        this.toggleActiveDayTime((dayArrayLength - 1), (dayArrayLength - 2), dArray, dayArrayLength);
 
         setInterval(() => {
             this.toggleActiveDayTime(i, e, dArray, dayArrayLength);
@@ -52,14 +58,14 @@ class HomeAnimation extends Component {
                 i = 0;
             }
             e = (i === 0 ) ? (dayArrayLength - 1) : (i - 1) ;
-        }, 3000)
+        }, 20000)
     }
 
     toggleActiveDayTime(i, e, dArray, dayArrayLength) {
         let dActive = {...dArray[i]};
         let dPrevActive = {...dArray[e]};
-        // console.log('Prev active time was ' + dPrevActive.time);
-        // console.log('Current active time is ' + dActive.time);
+        console.log('Prev active time was ' + dPrevActive.time);
+        console.log('Current active time is ' + dActive.time);
         dPrevActive.active = false;
         dActive.active = true;
         dArray[e] = dPrevActive;
@@ -80,15 +86,21 @@ class HomeAnimation extends Component {
                     <img src="" alt="" className="moon"/>
                     <img src="" alt="" className="sun"/>
                 </div>
+                <div className="bgLandscape"></div>
+                
                 <div className="cityScape">
                     <div className="cityDay"></div>
                     <div className="cityNight"></div>
                 </div>
+                <div className="buildings2"></div>
+                <div className="trees2"></div>
+                <div className="buildings"></div>
+                <div className="trees1"></div>
                 <div className="sidewalk">
-                    <img src="" alt="" className="bb1"/>
-                    <img src="" alt="" className="bb2"/>
-                    <img src="" alt="" className="bb3"/>
-                    <img src="" alt="" className="bb4"/>
+                    <img src={bb1} alt="" className="bb1"/>
+                    <img src={bb2} alt="" className="bb2"/>
+                    <img src={bb3} alt="" className="bb3"/>
+                    <img src={bb4} alt="" className="bb4"/>
                 </div>
                 <div className="road"></div>
                 <div className="bike">
