@@ -48,6 +48,7 @@
             width: 35px;
             left: 0;
             top: 0;
+            animation: fSuspension 4s ease infinite;
             .fork, .fWheel {
                 position: absolute;
             }
@@ -68,6 +69,7 @@
             width: 40px;
             left: 0;
             top: 0;
+            animation: rSuspension 4s ease infinite;
             .swingarm, .rWheel {
                 position: absolute;
             }
@@ -92,13 +94,87 @@
         z-index: 40;
         width: 13500px;
         .cityDay {
-            background-image: url(../../images/animation/landscape/city-day.svg);
+            // background-image: url(../../images/animation/landscape/city-day.svg);
             background-repeat: repeat-x;
             height: 500px;
             width: 13500px;
             will-change: transform;
             animation: city 50s linear infinite;
         }
+    }
+    .bgLandscape {
+        position: absolute;
+        left: 0;
+        bottom: 210px;
+        z-index: 49;
+        background-image: url(../../images/animation/landscape/bglandscape.svg);
+        height: 400px;
+        width: 13500px;
+        background-repeat: repeat-x;
+        background-size: 33.33%;
+        background-repeat: repeat-x;
+        background-position: bottom;
+        will-change: transform;
+        animation: city 120s linear infinite;
+    }
+    .buildings {
+        position: absolute;
+        left: 0;
+        bottom: 214px;
+        z-index: 49;
+        background-image: url(../../images/animation/landscape/buildings.svg);
+        height: 400px;
+        width: 13500px;
+        background-repeat: repeat-x;
+        background-size: 33.33%;
+        background-repeat: repeat-x;
+        background-position: bottom;
+        will-change: transform;
+        animation: city 35s linear infinite;
+    }
+    .buildings2 {
+        position: absolute;
+        left: 0;
+        bottom: 215px;
+        z-index: 49;
+        background-image: url(../../images/animation/landscape/buildings2.svg);
+        height: 400px;
+        width: 13500px;
+        background-repeat: repeat-x;
+        background-size: 33.33%;
+        background-repeat: repeat-x;
+        background-position: bottom;
+        will-change: transform;
+        animation: city 50s linear infinite;
+    }
+    .trees2 {
+        position: absolute;
+        left: 0;
+        bottom: 188px;
+        z-index: 49;
+        background-image: url(../../images/animation/landscape/trees2.svg);
+        height: 170px;
+        width: 4500px;
+        background-repeat: repeat-x;
+        background-size: 33.33%;
+        background-position: left center;
+        background-repeat: repeat-x;
+        will-change: transform;
+        animation: trees 25s linear infinite;
+    }
+    .trees1 {
+        position: absolute;
+        left: 0;
+        bottom: 177px;
+        z-index: 49;
+        background-image: url(../../images/animation/landscape/trees1.svg);
+        height: 210px;
+        width: 4500px;
+        background-size: 33.33%;
+        background-position: left center;
+        background-repeat: repeat-x;
+        will-change: transform;
+        animation: trees 20s linear infinite;
     }
     .sidewalk {
         position: absolute;
@@ -108,6 +184,28 @@
         width: 13500px;
         height: 100px;
         background: gray;
+        will-change: transform;
+        animation: sidewalk 30s linear infinite;
+        .bb1, .bb2, .bb3, .bb4 {
+            position: absolute;
+            bottom: 90px;
+        }
+        .bb1 {
+            width: 350px;
+            left: 2000px;
+        }
+        .bb2 {
+            width: 100px;
+            left: 4000px;
+        }
+        .bb3 {
+            width: 100px;
+            left: 7000px;
+        }
+        .bb4 {
+            width: 400px;
+            left: 9000px;
+        }
     }
 }
 
@@ -125,7 +223,26 @@
       transform: translate3d(0, 0, 0);
     }
     100%{
-      transform: translate3d(-4500px, 0, 0); /* The image width */
+      transform: translate3d(-33.33%, 0, 0); /* The image width */
+    }
+}
+
+@keyframes trees {
+    0%{
+      transform: translate3d(0, 0, 0) scale(2);
+      
+    }
+    100%{
+      transform: translate3d(-66.66%, 0, 0) scale(2); /* The image width */
+    }
+}
+
+@keyframes sidewalk {
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(-80%, 0, 0); /* The image width */
     }
 }
 
@@ -135,5 +252,77 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes rSuspension {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    10% {
+        transform: translate3d(0, -0.25px, 0);
+    }
+    20% {
+        transform: translate3d(0, 0, 0);
+    }
+    30% {
+        transform: translate3d(0, -0.5px, 0);
+    }
+    40% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+    60% {
+        transform: translate3d(0, -1px, 0);
+    }
+    70% {
+        transform: translate3d(0, 0, 0);
+    }
+    80% {
+        transform: translate3d(0, 0, 0);
+    }
+    90% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -0.25px, 0);
+    }
+}
+
+@keyframes fSuspension {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    10% {
+        transform: translate3d(-0.25px, -0.25px, 0);
+    }
+    20% {
+        transform: translate3d(0, 0, 0);
+    }
+    30% {
+        transform: translate3d(-0.5px, -0.5px, 0);
+    }
+    40% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+    60% {
+        transform: translate3d(-0.25px, -0.25px, 0);
+    }
+    70% {
+        transform: translate3d(0, 0, 0);
+    }
+    80% {
+        transform: translate3d(0, 0, 0);
+    }
+    90% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-0.5px, -0.5px, 0);
     }
 }
