@@ -40,10 +40,7 @@ export const pageQuery = graphql`
             excerpt
             slug
             date(formatString: "MMMM DD, YYYY")
-            featured_media {
-                source_url
-                alt_text
-            }
+            
         }
         site {
             id
@@ -54,3 +51,9 @@ export const pageQuery = graphql`
         }
     }
 `
+
+
+// featured_media {
+//     source_url
+//     alt_text
+// }
