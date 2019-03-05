@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HomeAnimation from './components/HomeAnimation/HomeAnimation';
 import Resume from './components/Resume/Resume';
 import Header from './components/Header/Header';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
