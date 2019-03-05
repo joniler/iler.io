@@ -1,0 +1,23 @@
+.resumeContainer {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: rgba(0,0,0,0.5);
+    display: none;
+    .resume {
+        display: flex;
+        padding: 30px;
+        max-width: 1200px;
+        margin: 40px auto;
+        background: #1b1b1b;
+        border-radius: 5px;
+        box-shadow: 4px 4px 20px rgba(0,0,0,0.3);
+        height: 500px;
+        h1, h2, h3,h4, h5, h6 {
+            color: #cb6d6e;
+        }
+    }
+}
