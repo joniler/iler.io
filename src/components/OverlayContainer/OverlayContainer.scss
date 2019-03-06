@@ -1,7 +1,10 @@
-.intContainer {
+.overlayContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 80px;
-    z-index: 9999;
+    z-index: 9998;
     height: calc(100vh - 80px);
     width: 100vw;
     background: rgba($color: #000000, $alpha: 0.5);
@@ -9,5 +12,11 @@
     transition: opacity 500ms ease;
     &.active {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .overlayContainer {
+        height: calc(100vh - 80px);
     }
 }
