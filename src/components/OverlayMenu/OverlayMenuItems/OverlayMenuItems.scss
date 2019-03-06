@@ -1,0 +1,76 @@
+.menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5em;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 200ms ease;
+    .menuItemLabel {
+        user-select: none;
+        font-weight: bold;
+        position: absolute;
+        font-size: 0.6em;
+        bottom: 20px;
+        opacity: 0;
+        transform: scaleX(0);
+        transition: opacity 200ms ease, transform 200ms ease;
+    }
+    &:hover {
+        color: #68a2ce;
+        transform: scale(1.2) translateY(-8px);
+        .menuItemLabel {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+    &.active {
+        color: #71b373;
+        transform: scale(1.1);
+        &:hover {
+            transform: scale(1.2) translateY(-8px);
+            .menuItemLabel {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+@media (hover: none) {
+    .menuItem {
+        &:hover {
+            color: white;
+            transform: scale(1);
+            .menuItemLabel {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+        }
+        &.active {
+            color: #71b373;
+            transform: scale(1.1);
+            &:hover {
+                transform: scale(1) translateY(0);
+                .menuItemLabel {
+                    opacity: 0;
+                    transform: scaleX(0);
+                }
+            }
+        }
+    } 
+}
+
+@media only screen and (max-width: 1024px) {
+    .menuItem {
+        height: 80px;
+        width: 60px;
+        font-size: 1.2em;
+        .menuItemLabel{
+            bottom: 10px;
+        }
+    }
+}

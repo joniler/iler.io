@@ -1,49 +1,86 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.interactiveOpen {
-  shape-outside: polygon(100% 0, 0% 100%, 100% 100%);
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  height: 100px;
-  width: 100px;
-  background: #71b373;
-  z-index: 100000;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  transform-origin: bottom right;
-  transition: all 200ms ease;
-  cursor: pointer;
-  
-  .icon {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    font-size: 2em;
-    color: white;
-    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
-    transition: all 200ms ease;
-    user-select: none;
-  }
+.overlayMenuContainer {
+	overflow: hidden;
+}
 
-  #infoClose, #infoOpen {
-    opacity: 0;
-    &.active {
-      opacity: 1;
-    }
-  }
+.overlayToggle {
+	shape-outside: polygon(100% 0, 0% 100%, 100% 100%);
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	height: 100px;
+	width: 100px;
+	z-index: 100000;
+	background: #71b373;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	transform-origin: bottom right;
+	transition: all 200ms ease;
+	cursor: pointer;
 
-  &:hover, &:focus {
-    transform: scale(1.2);
-    background: #68a2ce;
-    #infoOpen, #infoClose {
-      transform: scale(1.3) rotate(15deg);
-    }
-  }
+	.icon {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+		font-size: 2em;
+		color: white;
+		filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+		transition: all 200ms ease;
+		user-select: none;
+	}
 
-  &.active {
-    background: #cb6e6e;
-  }
+	#infoClose, #infoOpen {
+		opacity: 0;
+
+		&.active {
+			opacity: 1;
+		}
+	}
+
+	&:hover {
+		#infoOpen, #infoClose {
+			transform: scale(1.2) rotate(15deg);
+		}
+	}
+
+	&.active {
+		background: #cb6e6e;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.overlayToggle {
+		height: 80px;
+		width: 80px;
+		.icon {
+			bottom: 12px;
+			right: 12px;
+			font-size: 1.5em;
+		}
+		&.active {
+			background: #cb6e6e;
+		}
+	}
+	.overlayMenu {
+		height: 80px;
+		width: 100vw;
+	}
+}
+
+@media (hover: none) {
+	.overlayToggle {
+		&:hover {
+			transform: scale(1);
+			background: #71b373;
+			#infoOpen, #infoClose {
+				transform: scale(1) rotate(0);
+			}
+		}
+		&.active {
+			background: #cb6e6e;
+		}
+	}
 }
