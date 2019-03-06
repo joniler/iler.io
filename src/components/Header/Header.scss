@@ -1,10 +1,28 @@
 header {
     display: flex;
+    align-items: center;
     height: 80px;
     width: 100%;
     background: #383838;
     .logo {
         width: 70px;
         margin-left: 20px;
+    }
+    .headerNav {
+        margin-left: auto;
+        margin-right: 10px;
+        .headerNavLink {
+            color: white;
+            font-size: 1.5em;
+            padding: 0 10px;
+            &:hover {
+                .icon {
+                    transform: scale(1.05) rotate(20deg);
+                }
+            }
+            .icon {
+                transition: transform 200ms ease;
+            }
+        }
     }
 }
