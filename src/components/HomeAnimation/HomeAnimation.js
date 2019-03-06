@@ -12,7 +12,6 @@ import bb1 from '../../images/animation/billboards/bb1.svg'
 import bb2 from '../../images/animation/billboards/bb2.svg'
 import bb3 from '../../images/animation/billboards/bb3.svg'
 import bb4 from '../../images/animation/billboards/bb4.svg'
-import bgLandscape from '../../images/animation/landscape/bglandscape.svg'
 
 class HomeAnimation extends Component {
     state = {
@@ -64,8 +63,8 @@ class HomeAnimation extends Component {
     toggleActiveDayTime(i, e, dArray, dayArrayLength) {
         let dActive = {...dArray[i]};
         let dPrevActive = {...dArray[e]};
-        console.log('Prev active time was ' + dPrevActive.time);
-        console.log('Current active time is ' + dActive.time);
+        // console.log('Prev active time was ' + dPrevActive.time);
+        // console.log('Current active time is ' + dActive.time);
         dPrevActive.active = false;
         dActive.active = true;
         dArray[e] = dPrevActive;
@@ -97,25 +96,25 @@ class HomeAnimation extends Component {
                 <div className="buildings"></div>
                 <div className="trees1"></div>
                 <div className="sidewalk">
-                    <img src={bb1} alt="" className="bb1"/>
-                    <img src={bb2} alt="" className="bb2"/>
-                    <img src={bb3} alt="" className="bb3"/>
-                    <img src={bb4} alt="" className="bb4"/>
+                    <img draggable="false" src={bb1} alt="" className="bb1"/>
+                    <img draggable="false" src={bb2} alt="" className="bb2"/>
+                    <img draggable="false" src={bb3} alt="" className="bb3"/>
+                    <img draggable="false" src={bb4} alt="" className="bb4"/>
                 </div>
                 <div className="road"></div>
                 <div className="bike">
-                <div className="bikeFront">
-                    <img src={fWheel} alt="" className="fWheel"/>
-                        <img src={fork} alt="" className="fork"/>
+                    <div className="bikeFront">
+                        <img draggable="false" src={fWheel} alt="" className="fWheel"/>
+                        <img draggable="false" src={fork} alt="" className="fork"/>
                     </div>
                     <div className="bikeRear">
-                        <img src={rWheel} alt="" className="rWheel"/>
-                        <img src={swingarm} alt="" className="swingarm"/>
+                        <img draggable="false" src={rWheel} alt="" className="rWheel"/>
+                        <img draggable="false" src={swingarm} alt="" className="swingarm"/>
                     </div>
-                    <img src={tiger} alt="" className="tiger"/>
+                    <img draggable="false" src={tiger} alt="" className="tiger"/>
                     <div className="rider">
-                        <img src={rider} alt="" className="riderBody"/>
-                        <img src={riderHead} alt="" className="riderHead"/>
+                        <img draggable="false" src={rider} alt="" className="riderBody"/>
+                        <img draggable="false" src={riderHead} alt="" className="riderHead"/>
                     </div>
                 </div>
                 <div className="cars"></div>
