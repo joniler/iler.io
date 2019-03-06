@@ -1,0 +1,27 @@
+.pageMe {
+    overflow-y: scroll;
+    padding-right: 0px; /* Increase/decrease this value for cross-browser compatibility */
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
+}
+.dL {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
+}
+.bio {
+    padding: 20px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
+    p {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}

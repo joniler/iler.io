@@ -19,7 +19,7 @@ const OverlayMenu = (props) => {
     })
 
     return(
-        <div className={"overlayMenu " + (props.active ? 'active' : '')}>
+        <div className={"overlayMenu" + (props.active ? ' active' : '')}>
 			{overlayMenuItems}
         </div>
     )

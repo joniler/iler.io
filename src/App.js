@@ -59,15 +59,15 @@ class App extends Component {
 						menuHandler = {this.overlayMenuHandler}
 					/>
 					<div 
-						className={"overlayToggle " + (this.state.overlayActive ? 'active' : '')} 
+						className={"overlayToggle" + (this.state.overlayActive ? ' active' : '')} 
 						onClick={this.overlayClickHandler}>
 						<FontAwesomeIcon 
 							id="infoOpen" 
-							className={"icon " + (this.state.overlayActive ? '' : 'active')} 
+							className={"icon" + (this.state.overlayActive ? '' : ' active')} 
 							icon={faInfoCircle} />
 						<FontAwesomeIcon 
 							id="infoClose" 
-							className={"icon " + (this.state.overlayActive ? 'active' : '')} 
+							className={"icon" + (this.state.overlayActive ? ' active' : '')} 
 							icon={faTimesCircle} />
 					</div>
 				</div>
