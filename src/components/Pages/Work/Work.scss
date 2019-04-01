@@ -10,36 +10,94 @@
         font-size: 1em;
         width: 100%;
         font-weight: bold;
+        border-bottom: 1px solid white;
         .react-tabs__tab {
+            text-transform: uppercase;
+            font-weight: 300;
+            border: none;
+            border-radius: 3px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            transition: all 200ms ease;
+            border-bottom: 1px solid white;
+            background: #787878;
+            margin-right: 10px;
+            color: white;
             &:hover {
-                background: #68a2ce;
-                border-radius: 3px;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                transition: all 200ms ease;
+                background: lighten($color: #787878, $amount: 5);
             }
         }
         .react-tabs__tab--selected {
             background: #71b373;
-            border: none;
-            color: white;
-            border-radius: 3px;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
             &:hover {
                 background: #71b373;
             }
         }
     }
+    .workItem {
+        margin-bottom: 20px;
+    }
     .workHeader {
         h1 {
-            margin: 0 0 10px;
+            font-weight: 900;
+            font-size: 1.6em;
+            margin: 0 0 5px;
+            text-transform: uppercase;
         }
     }
+
+    .react-tabs__tab-panel--selected {
+        animation: fade-and-slide-in 200ms ease;
+    }
+
     .tabContainer {
         .tab {
-            margin-top: 10px;
+            margin-top: 20px;
             overflow-y: scroll;
+            .workHeader {
+                background: #383838;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                .wiNav {
+                    .wiNavBtn {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .visit{
+                        color: #68a2ce;
+                        margin-right: 10px;
+                    }
+                    .more {
+                        color: #71b373;
+                    }
+                }
+            }
+            h2 {
+                display: inline-block;
+                font-weight: bold;
+                font-size: 1.1em;
+                text-transform: uppercase;
+                margin: 0;
+                border-bottom: 1px solid white;
+                padding-bottom: 4px;
+            }
+            h3 {
+                text-transform: lowercase;
+                font-size: 1em;
+                margin: 0;
+                font-style: italic;
+                font-weight: 400;
+                padding-top: 4px;
+            }
+            p {
+                padding: 70px;
+                font-size: .9em;
+                line-height: 26px;
+                background: #585858;
+                margin: 0;
+            }
         }
         .react-tabs__tab-panel--selected {
             height: calc(60vh - 40px);
@@ -52,6 +110,25 @@
         .nav {
             font-size: .8em;
         }
+        .tabContainer {
+            .tab {
+                .workHeader {
+                    text-align: center;
+                    flex-direction: column;
+                }
+            }
+        }
     }
 }
+
+@keyframes fade-and-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 

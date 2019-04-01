@@ -2,8 +2,30 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: "Avenir", sans-serif;
+	src: url("./fonts/Avenir Next.woff");
+}
+
+@font-face {
+	font-family: "Circular", sans-serif;
+	src: url("./fonts/circular.woff2");
+}
+
+$avenir: "Avenir", sans-serif;
+$circular: "Circular", sans-serif;
+
 .App {
 	text-align: center;
+	font-family: $avenir;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $avenir;
+}
+
+p {
+	font-family: $circular;
 }
 
 .overlayMenuContainer {
