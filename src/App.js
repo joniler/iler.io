@@ -5,10 +5,10 @@ import OverlayMenu from './components/OverlayMenu/OverlayMenu';
 import Header from './components/Header/Header';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faInfoCircle, faTimesCircle, faUser, faBriefcase, faEnvelope } from '@fortawesome/pro-solid-svg-icons';
+import { faInfoCircle, faTimesCircle, faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones } from '@fortawesome/pro-solid-svg-icons';
 import './App.scss';
 
-library.add(faUser, faBriefcase, faEnvelope)
+library.add(faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones);
 
 var isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
 
