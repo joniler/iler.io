@@ -10,7 +10,7 @@ import './App.scss';
 
 library.add(faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones);
 
-var isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
+const isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
 
 if(isIE){
  	alert("Please don't use Internet explorer, it breaks so much of the Internet. Download Chrome here: https://www.google.com/chrome/"); 
@@ -31,6 +31,7 @@ class App extends Component {
 		this.state.overlayActive === false ? this.setState({overlayActive: true}) : this.setState({overlayActive: false})
 	}
 
+	// Toggles active states of our menu object when menu items are clicked
 	overlayMenuHandler = (i) => {
 		let menuTemp = this.state.overlayMenu;
 		let currentlyClicked = menuTemp[i];
@@ -71,7 +72,7 @@ class App extends Component {
 							icon={faTimesCircle} />
 					</div>
 				</div>
-				<OverlayContainer active={this.state.overlayActive} />
+				<OverlayContainer active={this.state.overlayActive} menu={this.state.overlayMenu} />
 			</div>
 		);
   	}
