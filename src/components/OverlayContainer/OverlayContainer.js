@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import Me from '../Pages/Me/Me';
-import Work from '../Pages/Work/Work';
+import React from 'react';
 import './OverlayContainer.scss';
+import '../ActivitySwitcher/ActivitySwitcher';
+import ActiviySwitcher from '../ActivitySwitcher/ActivitySwitcher';
 
-class OverlayContainer extends Component {
-    const 
-    render() {
-        return(
-            <div className={"overlayContainer" + (this.props.active ? ' active' : '')}>
-                <Work/>
-                {/* <Me/> */}
-            </div>
-        )
-    }
+const OverlayContainer = (props) => {
+    
+    return(
+        <div className={"overlayContainer" + (props.active ? ' active' : '')}>
+            <ActiviySwitcher menu={props.menu}/>
+        </div>
+    )
 }
 
 export default OverlayContainer;

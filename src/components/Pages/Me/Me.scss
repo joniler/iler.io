@@ -1,5 +1,5 @@
 .pageMe {
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-right: 0;
     @supports (-moz-appearance:none) {
         padding-right: 20px;

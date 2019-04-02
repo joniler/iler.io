@@ -59,7 +59,9 @@ const Work = (props) => {
                                 <h3>Web Design</h3>
                             </div>
                             <div className="wiNav">
-                                <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                <a target="_blank" rel="noopener noreferrer" href="https://aimandarrowgroup.com/">
+                                    <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                </a>
                                 <FontAwesomeIcon  className="wiNavBtn more" icon='plus'/>
                             </div>
                         </div>
@@ -74,7 +76,9 @@ const Work = (props) => {
                                 <h3>Web Design</h3>
                             </div>
                             <div className="wiNav">
-                                <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                <a target="_blank" rel="noopener noreferrer" href="https://latinospro.org/">
+                                    <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                </a>
                                 <FontAwesomeIcon  className="wiNavBtn more" icon='plus'/>
                             </div>
                         </div>
@@ -89,7 +93,9 @@ const Work = (props) => {
                                 <h3>Web Design</h3>
                             </div>
                             <div className="wiNav">
-                                <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                <a target="_blank" rel="noopener noreferrer" href="https://rovely.com/">
+                                    <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                </a>
                                 <FontAwesomeIcon  className="wiNavBtn more" icon='plus'/>
                             </div>
                         </div>
@@ -104,7 +110,9 @@ const Work = (props) => {
                                 <h3>Web Design</h3>
                             </div>
                             <div className="wiNav">
-                                <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                <a target="_blank" rel="noopener noreferrer" href="https://chicagocommons.org/">
+                                    <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
+                                </a>
                                 <FontAwesomeIcon  className="wiNavBtn more" icon='plus'/>
                             </div>
                         </div>
