@@ -29,7 +29,7 @@ class Contact extends Component {
             business: this.state.business,
             message: this.state.message
         }
-        axios.post('API_URI', data)
+        axios.post('ilermailer.joniler.now.sh', data)
         .then( res => {
             this.setState({sent: true}, this.resetForm());
         })
