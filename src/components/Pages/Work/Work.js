@@ -9,7 +9,7 @@ const Work = (props) => {
     return(
         <Tabs className="pageWork">
             <div className="workHeader">
-                <h1>Work</h1>
+                <h1>THINGS I'VE DONE</h1>
                 <TabList className="nav">
                     <Tab>Web</Tab>
                     <Tab>Interactive</Tab>
@@ -168,7 +168,7 @@ const Work = (props) => {
                             </div>
                         </div>
                         <div className="workContent">
-                            <p></p>
+                            <p>Mirrorshow needed custom music tailored to their interactive experience. I wrote 10 tracks of downtempo instrumental tracks that fit into the flow of our application, and also designed all the sound effects.</p>
                         </div>
                     </div>
                     <div className="workItem">
@@ -183,7 +183,7 @@ const Work = (props) => {
                             </div>
                         </div>
                         <div className="workContent">
-                            <p></p>
+                            <p>Highs & Lows in the Windy City is made up entirely of unreleased music produced by Jon Iler and his friends over the span of several years in Chicago. In good times and bad times; the moods can clearly be felt track to track, and the album perfectly sums up Jon's years contributing to the house music community with beautiful people that he is proud to call his friends.</p>
                         </div>
                     </div>
                     <div className="workItem">
@@ -198,7 +198,7 @@ const Work = (props) => {
                             </div>
                         </div>
                         <div className="workContent">
-                            <p></p>
+                            <p>Concise Music is a small, boutique label that I started about 4 yers ago while living in Chicago. We brought smaller artists together from all over the world and released their music worldwide. The label is currently on a hiatus, but we expect to be cranking more new releases out in 2020.</p>
                         </div>
                     </div>
                 </TabPanel>
