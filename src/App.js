@@ -5,10 +5,10 @@ import OverlayMenu from './components/OverlayMenu/OverlayMenu';
 import Header from './components/Header/Header';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faInfoCircle, faTimesCircle, faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones } from '@fortawesome/pro-solid-svg-icons';
+import { faInfoCircle, faTimesCircle, faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones, faPaperPlane, faCheck } from '@fortawesome/pro-solid-svg-icons';
 import './App.scss';
 
-library.add(faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones);
+library.add(faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones, faPaperPlane, faCheck);
 
 const isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
 
@@ -27,7 +27,8 @@ class App extends Component {
         ]
 	};
 
-	overlayClickHandler = (event) => {
+	// Toggles the menu overlay when you click the button ;P
+	overlayClickHandler = () => {
 		this.state.overlayActive === false ? this.setState({overlayActive: true}) : this.setState({overlayActive: false})
 	}
 

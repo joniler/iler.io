@@ -41,6 +41,45 @@
             "type" : "Web Design",
             "link" : "https://chicagocommons.org/",
             "copy" : "For Rovely's branding, we spent a lot of time going over shades of green and blue to develop the color palette. We wanted it to be just off of familiar but still inviting. We chose the Panton typeface and then added the small triangle on the 'R' and customized a few of the letterforms to round out the main logo. For the website, we wanted to keep it clean and crisp with bold splashes of color. Custom icons and horizontal content bands break up the information into easy sections."
+        }
+    ],
+    "interactive" : [
+        {
+            "key" : "i01",
+            "title" : "Bolden",
+            "type" : "Web Design",
+            "link" : "https://boldenmovie.com/",
+            "copy" : "The website for the feature film Bolden highlights a flipbook style reminiscent of a bygone era. The type and layouts help to invoke thoughts of the early 1900s, the era where jazz began and subsequently changed the world."
         },
+        {
+            "key" : "i02",
+            "title" : "Derrick Carter",
+            "type" : "Web Design",
+            "link" : "https://derrickcarter.com/",
+            "copy" : "A site developed for the internationally famous Chicago House music DJ, Derrick Carter. Derrick's general style of clothing is very black and blue oriented, and he made it clear he wanted that reflected on his site. I created a palette of smooth, dark blues and deep grays; never going straight to black. The site is a single page design with a beautiful hero to draw you in. Derrick felt the style of the site matched exactly the aesthetic he was going for."
+        }
+    ],
+    "audio" : [
+        {
+            "key" : "a01",
+            "title" : "MIRRORSHOW MANAGEMENT",
+            "type" : "Sound Design",
+            "link" : "https://boldenmovie.com/",
+            "copy" : "The website for the feature film Bolden highlights a flipbook style reminiscent of a bygone era. The type and layouts help to invoke thoughts of the early 1900s, the era where jazz began and subsequently changed the world."
+        },
+        {
+            "key" : "a02",
+            "title" : "HIGHS & LOWS IN THE WINDY CITY",
+            "type" : "Full Length Album",
+            "link" : "https://concisemusic.bandcamp.com/album/highs-lows-in-the-windy-city",
+            "copy" : "Highs & Lows in the Windy City is made up entirely of unreleased music produced by Jon Iler and his friends over the span of several years in Chicago. In good times and bad times; the moods can clearly be felt track to track, and the album perfectly sums up Jon's years contributing to the house music community with beautiful people that he is proud to call his friends."
+        },
+        {
+            "key" : "a03",
+            "title" : "CONCISE MUSIC",
+            "type" : "Label Owner",
+            "link" : "https://www.beatport.com/label/concise-music/47139",
+            "copy" : "A site developed for the internationally famous Chicago House music DJ, Derrick Carter. Derrick's general style of clothing is very black and blue oriented, and he made it clear he wanted that reflected on his site. I created a palette of smooth, dark blues and deep grays; never going straight to black. The site is a single page design with a beautiful hero to draw you in. Derrick felt the style of the site matched exactly the aesthetic he was going for."
+        }
     ]
 }
