@@ -219,7 +219,7 @@
 }
 
 @supports (-webkit-appearance:none) {
-    .os-android & {
+    .os-android {
         .animationContainer {
             min-height: calc(100vh - 136px);
         }

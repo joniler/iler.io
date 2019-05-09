@@ -22,7 +22,7 @@
 }
 
 @supports (-webkit-appearance:none) {
-    .os-android & {
+    .os-android {
         .animationContainer {
             height: calc(100vh - 136px);
         }

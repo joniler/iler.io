@@ -22,7 +22,7 @@
 }
 
 @supports (-webkit-appearance:none) {
-  .os-android & {
+  .os-android {
     .overlayModal {
       margin-bottom: 120px;
     }
