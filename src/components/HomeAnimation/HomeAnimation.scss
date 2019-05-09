@@ -218,6 +218,12 @@
     }
 }
 
+@supports (-webkit-appearance:none) {
+    .animationContainer {
+      min-height: calc(100vh - 136px);
+    }
+}
+
 @keyframes road {
     0%{
       transform: translate3d(0, 0, 0);

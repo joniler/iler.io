@@ -20,3 +20,9 @@
         height: calc(100vh - 80px);
     }
 }
+
+@supports (-webkit-appearance:none) {
+    .animationContainer {
+      height: calc(100vh - 136px);
+    }
+}
