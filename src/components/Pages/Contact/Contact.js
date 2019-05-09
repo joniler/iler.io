@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import OverlayModal from '../../../hoc/OverlayModal/OverlayModal';
-import axios from 'axios';
+import * as emailjs from 'emailjs-com';
 import './Contact.scss';
+
+(function(){
+    emailjs.init("user_QRuuPQoP2QrAqIHagwqrF");
+ })();
 
 class Contact extends Component {
     // Constructs form in application state
@@ -16,26 +20,29 @@ class Contact extends Component {
         buttonText: 'SEND'
     }
 
-    // Uses Axios to send contact form to our API
+    // Uses EmailJS to send contact form
     formSubmit = (e) => {
         e.preventDefault();
         this.setState({
-            buttonText: '...Sending'
+            buttonText: 'Sending...'
         });
-        let data = {
-            name: this.state.name,
-            email: this.state.email,
-            phone: this.state.phone,
-            business: this.state.business,
-            message: this.state.message
-        }
-        axios.post('ilermailer.joniler.now.sh', data)
-        .then( res => {
+        let template_params = {
+            "name": this.state.name,
+            "email": this.state.email,
+            "phone": this.state.phone,
+            "business": this.state.business,
+            "message": this.state.message
+         }
+         
+         let service_id = "default_service";
+         let template_id = "iler_io_contact_form_submission";
+         emailjs.send(service_id, template_id, template_params)
+        .then( () => {
             this.setState({sent: true}, this.resetForm());
         })
         .catch( (err) => {
             console.log('Message not sent:' + err);
-        })
+        });
     }
 
     // Resets form once it has been sent
@@ -54,7 +61,7 @@ class Contact extends Component {
         return(
             <div className="contact">
             <h1>HIT ME UP!</h1>
-            <form onSubmit={ e => this.formSubmit(e)} method="post">
+            <form onSubmit={ (e) => this.formSubmit(e)} method="post">
                 <input 
                     onChange={e => this.setState({name: e.target.value})}
                     required 
@@ -89,7 +96,7 @@ class Contact extends Component {
                     id="message" 
                     cols="30" 
                     rows="10"></textarea>
-                <button type="submit" className={this.state.sent === false ? "" : "sent"}>
+                <button disabled={this.state.sent === false ? false : true} type="submit" className={this.state.sent === false ? "" : "sent"}>
                     {this.state.buttonText} <FontAwesomeIcon icon={this.state.sent === false ? "paper-plane" : "check"}/>
                 </button>
             </form>
