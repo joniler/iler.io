@@ -34,7 +34,7 @@ class App extends Component {
 	state = {
 		overlayActive: false,
 		overlayMenu: [
-            {item: 'me', icon: 'user', key: 'mi1', active: true},
+            {item: 'me', icon: 'user', key: 'mi1', active: false},
             {item: 'work', icon: 'briefcase', key: 'mi3', active: false},
             {item: 'contact', icon: 'envelope', key: 'mi4', active: false}
 		],
@@ -44,6 +44,7 @@ class App extends Component {
 	// Toggles the menu overlay when you click the button ;P
 	overlayClickHandler = () => {
 		this.state.overlayActive === false ? this.setState({overlayActive: true}) : this.setState({overlayActive: false})
+		console.log('done');
 	}
 
 	// Toggles active states of our menu object when menu items are clicked
@@ -70,22 +71,11 @@ class App extends Component {
 				<HomeAnimation/>
 				<div className="overlayMenuContainer">
 					<OverlayMenu 
+						overlayClickHandler={this.overlayClickHandler}
 						active={this.state.overlayActive}
 						overlayMenu={this.state.overlayMenu}
 						menuHandler = {this.overlayMenuHandler}
 					/>
-					<div 
-						className={"overlayToggle" + (this.state.overlayActive ? ' active' : '')} 
-						onClick={this.overlayClickHandler}>
-						<FontAwesomeIcon 
-							id="infoOpen" 
-							className={"icon" + (this.state.overlayActive ? '' : ' active')} 
-							icon={faInfoCircle} />
-						<FontAwesomeIcon 
-							id="infoClose" 
-							className={"icon" + (this.state.overlayActive ? ' active' : '')} 
-							icon={faTimesCircle} />
-					</div>
 				</div>
 				<OverlayContainer active={this.state.overlayActive} menu={this.state.overlayMenu} />
 			</div>

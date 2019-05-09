@@ -7,6 +7,7 @@ const OverlayMenu = (props) => {
     const overlayMenuItems = props.overlayMenu.map((mi, i) => {
         return(
             <OverlayMenuItems
+                overlayClickHandler={props.overlayClickHandler}
                 item={mi.item}
                 icon={mi.icon}
                 key={mi.key}
@@ -19,7 +20,7 @@ const OverlayMenu = (props) => {
     })
 
     return(
-        <div className={"overlayMenu" + (props.active ? ' active' : '')}>
+        <div className={"overlayMenu"}>
 			{overlayMenuItems}
         </div>
     )

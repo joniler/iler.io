@@ -5,7 +5,7 @@
     position: fixed;
     top: 80px;
     z-index: 9998;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 180px);
     width: 100vw;
     background: rgba($color: #000000, $alpha: 0.5);
     opacity: 0;
@@ -17,6 +17,6 @@
 
 @media only screen and (max-width: 1024px) {
     .overlayContainer {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 190px);
     }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import OverlayModal from '../../../hoc/OverlayModal/OverlayModal';
 import WorkItem from './WorkItem/WorkItem';
 import './Work.scss';
