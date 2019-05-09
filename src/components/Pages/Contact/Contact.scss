@@ -20,6 +20,11 @@ form {
         font-size: 1em;
         margin: 0 0 15px 0;
         resize: none;
+        font-family: inherit;
+        outline: none;
+        &:required {
+            box-shadow: none;
+        }
     }
     button {
         border: none;
