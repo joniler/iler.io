@@ -5,7 +5,6 @@ import Contact from '../Pages/Contact/Contact';
 
 const ActiviySwitcher = (props) => {
     const menu = props.menu;
-    console.log(menu);
     if (menu[0].active === true) {
         return <Me/>;
     }

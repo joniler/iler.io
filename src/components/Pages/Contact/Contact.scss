@@ -37,5 +37,8 @@ form {
         &:active {
             transform: scale(1);
         }
+        &.sent {
+            background: #68a2ce;
+        }
     }
 }
