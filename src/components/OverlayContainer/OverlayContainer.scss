@@ -17,6 +17,12 @@
 
 @media only screen and (max-width: 1024px) {
     .overlayContainer {
+        height: calc(100vh - 160px);
+    }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .overlayContainer {
         height: calc(100vh - 190px);
     }
 }

@@ -1,5 +1,6 @@
 .contact {
-    overflow-y: auto;
+    height: 100%;
+    overflow: hidden;
     h1 {
         font-weight: 900;
         font-size: 1.6em;
@@ -9,12 +10,18 @@
     }
 }
 
+.formContainer {
+    height: calc(100%);
+    overflow-y: scroll;
+}
+
 form {
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
     display: flex;
     flex-direction: column;
     max-width: 300px;
     input, textarea {
+        display: block;
         border: none;
         padding: 15px;
         font-size: 1em;
@@ -27,6 +34,7 @@ form {
         }
     }
     button {
+        display: block;
         border: none;
         padding: 15px;
         background: #71b373;
@@ -35,6 +43,7 @@ form {
         font-weight: bold;
         border-radius: 3px;
         transition: all 200ms ease;
+        margin-bottom: 60px;
         &:hover {
             background: darken($color: #71b373, $amount: 10);
             transform: scale(1.025);

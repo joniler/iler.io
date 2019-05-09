@@ -2,29 +2,57 @@
     position: relative;
     width: 100%;
     max-width: 700px;
-    max-height: calc(100vh - 180px);
+    max-height: calc(100vh - 220px);
     z-index: 8000;
     background: #484848;
     padding: 20px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 30px rgba($color: #000000, $alpha: 0.3);
     overflow: hidden;
     animation: fade-and-slide-in 200ms ease;
+    .closeButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
     .overlayModal {
-        max-height: calc(70vh);
-        margin-bottom: 80px;
+        position: fixed;
+        top: 80px;
+        max-width: 100%;
+        max-height: none;
+        height: calc(100vh - 160px);
         padding: 30px;
+        margin: 0;
     }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  @media only screen and (max-width: 1024px) {
+    .overlayModal {
+      max-height: none;
+      height: calc(100vh - 190px);
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .overlayModal {
+      max-height: none;
+      height: calc(100vh - 0px);
+    }
+  }
 }
 
 @keyframes fade-and-slide-in {
     from {
       opacity: 0;
-      transform: translateY(-10%);
+      transform: translateY(10%);
     }
     to {
       opacity: 1;
