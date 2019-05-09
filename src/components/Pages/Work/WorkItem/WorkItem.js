@@ -6,18 +6,17 @@ const WorkItem = (props) => {
         <div className="workItem">
             <div className="workHeader">
                 <div>
-                    <h2>Chicago Commons</h2>
-                    <h3>Web Design</h3>
+                    <h2>{props.title}</h2>
                 </div>
                 <div className="wiNav">
-                    <a target="_blank" rel="noopener noreferrer" href="https://chicagocommons.org/">
+                    <a target="_blank" rel="noopener noreferrer" href={props.link}>
                         <FontAwesomeIcon className="wiNavBtn visit" icon='link'/>
                     </a>
-                    <FontAwesomeIcon  className="wiNavBtn more" icon='plus'/>
+                    {/* <FontAwesomeIcon  className="wiNavBtn more" icon='plus'/> */}
                 </div>
             </div>
             <div className="workContent">
-                <p>Chicago Commons needed us to give their site a complete overhaul to not only apply their new branding but make the site more engaging for their users and easier to use for the staff. A priority was placed on the results of their highly successful programs so we tried to make what could be boring data on a spreadsheet jump off the page with color and typographic elements.</p>
+                <p>{props.copy}</p>
             </div>
         </div>
     )

@@ -7,7 +7,7 @@ const OverlayContainer = (props) => {
     
     return(
         <div className={"overlayContainer" + (props.active ? ' active' : '')}>
-            <ActiviySwitcher menu={props.menu}/>
+            <ActiviySwitcher menu={props.menu} />
         </div>
     )
 }

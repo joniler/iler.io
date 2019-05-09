@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faInfoCircle, faTimesCircle, faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones, faPaperPlane, faCheck } from '@fortawesome/pro-solid-svg-icons';
 import './App.scss';
+import workData from './data/Work.json';
 
 library.add(faUser, faBriefcase, faEnvelope, faLink, faPlus, faMinus, faVideo, faHeadphones, faPaperPlane, faCheck);
 
@@ -24,7 +25,8 @@ class App extends Component {
             {item: 'me', icon: 'user', key: 'mi1', active: true},
             {item: 'work', icon: 'briefcase', key: 'mi3', active: false},
             {item: 'contact', icon: 'envelope', key: 'mi4', active: false}
-        ]
+		],
+		work: workData
 	};
 
 	// Toggles the menu overlay when you click the button ;P
