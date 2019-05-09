@@ -21,14 +21,6 @@
     }
 }
 
-@supports (-webkit-appearance:none) {
-  .os-android {
-    .overlayModal {
-      margin-bottom: 120px;
-    }
-  }
-}
-
 @keyframes fade-and-slide-in {
     from {
       opacity: 0;

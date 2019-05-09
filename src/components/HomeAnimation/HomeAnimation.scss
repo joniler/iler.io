@@ -1,5 +1,5 @@
 .animationContainer {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 80px;
     width: 100vw;
@@ -215,14 +215,6 @@
 @supports (-webkit-overflow-scrolling: touch) {
 	.animationContainer {
         height: calc(100vh - 195px);
-    }
-}
-
-@supports (-webkit-appearance:none) {
-    .os-android {
-        .animationContainer {
-            min-height: calc(100vh - 136px);
-        }
     }
 }
 
