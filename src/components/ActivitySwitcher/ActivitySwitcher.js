@@ -6,13 +6,13 @@ import Contact from '../Pages/Contact/Contact';
 const ActiviySwitcher = (props) => {
     const menu = props.menu;
     if (menu[0].active === true) {
-        return <Me/>;
+        return <Me overlayClose={props.overlayClose}/>;
     }
     if (menu[1].active === true) {
-        return <Work/>;
+        return <Work overlayClose={props.overlayClose}/>;
     }
     if (menu[2].active === true) {
-        return <Contact/>;
+        return <Contact overlayClose={props.overlayClose}/>;
     }
     else {
         return null;

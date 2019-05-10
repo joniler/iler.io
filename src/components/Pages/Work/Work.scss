@@ -128,18 +128,29 @@
                     margin-bottom: 10px;
                 }
             }
+            .react-tabs__tab-panel--selected {
+                height: calc(70vh - 30px);
+            }
         }
     }
 }
 
-@keyframes fade-and-slide-in {
-    from {
-      opacity: 0;
-      transform: translateY(-10%);
+@media only screen and (max-width: 768px)  {
+    .react-tabs__tab-panel--selected {
+        padding-bottom: 100px;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0%);
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    @media only screen and (max-width: 1024px) {
+        .react-tabs__tab-panel--selected {
+            height: calc(70vh - 30px);
+        }
     }
-  }
+    @media only screen and (max-width: 400px) {
+        .react-tabs__tab-panel--selected {
+            padding-bottom: 200px;
+        }
+    }
+}
 
