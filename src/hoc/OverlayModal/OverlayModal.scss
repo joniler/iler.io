@@ -44,7 +44,13 @@
   @media only screen and (max-width: 400px) {
     .overlayModal {
       max-height: none;
-      height: calc(100vh - 0px);
+      height: calc(100vh - 270px);
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 568px) and (min-aspect-ratio: 40/71) {
+    .overlayModal {
+        max-height: none;
+        height: calc(100vh - 230px);
     }
   }
 }
