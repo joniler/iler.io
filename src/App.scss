@@ -146,7 +146,17 @@ p {
     and (orientation : portrait) {
         .animationContainer, .overlayModal {
             height: calc(100vh - 230px);
-        }
+		}
+		.formContainer {
+			height: calc(100vh - 340px);
+		}
+		.pageWork {
+			.tabContainer {
+				.react-tabs__tab-panel--selected {
+					height: calc(100vh - 390px);
+				}
+			}
+		}
     }
 
     /* ----------- iPhone 6, 6S, 7 and 8 Portrait ----------- */
@@ -158,7 +168,10 @@ p {
     and (orientation : portrait) { 
         .animationContainer, .overlayModal {
             height: calc(100vh - 230px);
-        }
+		}
+		.formContainer {
+			height: calc(100vh - 360px);
+		}
     }
 
     /* ----------- iPhone 6+, 7+ and 8+ Portrait ----------- */
@@ -170,10 +183,34 @@ p {
     and (orientation : portrait) { 
         .animationContainer, .overlayModal {
             height: calc(100vh - 230px);
-        }
+		}
+		.formContainer {
+			height: calc(100vh - 380px);
+		}
     }
 
-    /* ----------- iPhone X, and XS Portrait ----------- */
+    /* ----------- iPhone XS Max & XR Portrait ----------- */
+
+    @media only screen 
+	and (max-height : 896px) 
+	and (-webkit-device-pixel-ratio : 3) 
+	and (orientation : portrait) { 
+		.animationContainer, .overlayModal {
+			height: calc(100vh - 270px);
+		}
+		.formContainer {
+			height: calc(100vh - 400px);
+		}
+		.pageWork {
+			.tabContainer {
+				.react-tabs__tab-panel--selected {
+					height: calc(100vh - 430px);
+				}
+			}
+		}
+	}
+	
+	 /* ----------- iPhone X, and XS Portrait ----------- */
 
     /* Portrait and Landscape */
     @media only screen 
@@ -181,18 +218,17 @@ p {
     and (-webkit-min-device-pixel-ratio: 3) 
     and (orientation : portrait) { 
         .animationContainer, .overlayModal {
-            height: calc(100vh - 270px);
-        }
-    }
-
-    /* ----------- iPhone XS Max & XR Portrait ----------- */
-
-    @media only screen 
-        and (max-height : 896px) 
-        and (-webkit-device-pixel-ratio : 3) 
-        and (orientation : portrait) { 
-            .animationContainer, .overlayModal {
-                height: calc(100vh - 270px);
-            }
+            height: calc(100vh - 230px);
+		}
+		.formContainer {
+			height: calc(100vh - 380px);
+		}
+		.pageWork {
+			.tabContainer {
+				.react-tabs__tab-panel--selected {
+					height: calc(100vh - 430px);
+				}
+			}
+		}
     }
 }
