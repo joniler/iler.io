@@ -15,9 +15,9 @@
     .closeButton {
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       color: white;
-      padding: 10px;
+      padding: 10px 18px;
       font-size: 20px;
     }
 }
@@ -29,30 +29,12 @@
         max-width: 100%;
         max-height: none;
         height: calc(100vh - 160px);
-        padding: 30px;
+        padding: 15px;
         margin: 0;
+        .closeButton {
+          padding: 10px 15px;
+        }
     }
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-  @media only screen and (max-width: 1024px) {
-    .overlayModal {
-      max-height: none;
-      height: calc(100vh - 190px);
-    }
-  }
-  @media only screen and (max-width: 400px) {
-    .overlayModal {
-      max-height: none;
-      height: calc(100vh - 270px);
-    }
-  }
-  @media only screen and (min-width: 320px) and (max-width: 568px) and (min-aspect-ratio: 40/71) {
-    .overlayModal {
-        max-height: none;
-        height: calc(100vh - 230px);
-    }
-  }
 }
 
 @keyframes fade-and-slide-in {

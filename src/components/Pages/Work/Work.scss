@@ -41,7 +41,7 @@
         h1 {
             font-weight: 900;
             font-size: 1.6em;
-            margin: 0 0 5px;
+            margin: 20px 0;
             text-transform: uppercase;
             text-align: center;
         }
@@ -102,7 +102,7 @@
             }
         }
         .react-tabs__tab-panel--selected {
-            height: calc(60vh - 40px);
+            height: calc(100vh - 420px);
         }
     }
 }
@@ -129,27 +129,8 @@
                 }
             }
             .react-tabs__tab-panel--selected {
-                height: calc(70vh - 30px);
+                height: calc(100vh - 320px);
             }
-        }
-    }
-}
-
-@media only screen and (max-width: 768px)  {
-    .react-tabs__tab-panel--selected {
-        padding-bottom: 100px;
-    }
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-    @media only screen and (max-width: 1024px) {
-        .react-tabs__tab-panel--selected {
-            height: calc(70vh - 30px);
-        }
-    }
-    @media only screen and (max-width: 400px) {
-        .react-tabs__tab-panel--selected {
-            padding-bottom: 200px;
         }
     }
 }

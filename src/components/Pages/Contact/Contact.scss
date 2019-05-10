@@ -1,24 +1,22 @@
 .contact {
-    height: 100%;
+    height: calc(100%);
     overflow: hidden;
     h1 {
         font-weight: 900;
         font-size: 1.6em;
-        margin: 0 0 5px;
+        margin: 20px 0;
         text-transform: uppercase;
         color: white;
     }
 }
 
 .formContainer {
-    height: calc(100%);
-    overflow-y: scroll;
+    height: calc(100vh - 360px);
+    overflow-y: auto;
 }
 
 form {
     margin: 10px auto 0 auto;
-    display: flex;
-    flex-direction: column;
     max-width: 300px;
     input, textarea {
         display: block;
@@ -29,6 +27,8 @@ form {
         resize: none;
         font-family: inherit;
         outline: none;
+        width: 100%;
+        margin-right: 20px;
         &:required {
             box-shadow: none;
         }
@@ -42,8 +42,8 @@ form {
         font-size: 1.3em;
         font-weight: bold;
         border-radius: 3px;
+        width: 100%;
         transition: all 200ms ease;
-        margin-bottom: 60px;
         &:hover {
             background: darken($color: #71b373, $amount: 10);
             transform: scale(1.025);
@@ -54,5 +54,11 @@ form {
         &.sent {
             background: #68a2ce;
         }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .formContainer {
+        height: calc(100vh - 280px);
     }
 }

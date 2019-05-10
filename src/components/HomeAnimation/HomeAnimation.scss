@@ -212,33 +212,6 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {
-    .animationContainer {
-        height: calc(100vh - 160px);
-    }
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-    @media only screen and (max-width: 1024px) {
-        .animationContainer {
-            max-height: none;
-            height: calc(100vh - 190px);
-        }
-    }
-    @media only screen and (max-width: 400px) {
-        .animationContainer {
-            max-height: none;
-            height: calc(100vh - 270px);
-        }
-    }
-    @media only screen and (min-width: 320px) and (max-width: 568px) and (min-aspect-ratio: 40/71) {
-        .animationContainer {
-            max-height: none;
-            height: calc(100vh - 230px);
-        }
-    }
-}
-
 @keyframes road {
     0%{
       transform: translate3d(0, 0, 0);
