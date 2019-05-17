@@ -1,6 +1,13 @@
 [
     [
         {
+            "key" : "w01",
+            "title" : "Bolden",
+            "type" : "web",
+            "link" : "https://boldenmovie.com/",
+            "copy" : "The website for the feature film Bolden highlights a flipbook style reminiscent of a bygone era. The type and layouts help to invoke thoughts of the early 1900s, the era where jazz began and subsequently changed the world."
+        },
+        {
             "key" : "w02",
             "title" : "Derrick Carter",
             "type" : "web",

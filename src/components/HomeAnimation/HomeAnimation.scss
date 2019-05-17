@@ -3,8 +3,9 @@
     left: 0;
     top: 80px;
     width: 100vw;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 160px);
     overflow: hidden;
+    padding-bottom: 60px;
     .road {
         position: absolute;
         bottom: 0;
